@@ -1,0 +1,15 @@
+<input type="number" #numero>
+<button (click)="piu(numero)">+</button>
+<button (click)="meno(numero)">-</button>
+
+<br>
+
+{{numeri.tot}} tot
+{{numeri.nClick}} nclick
+
+<button (click)="favorito()">favorito</button>
+
+@for(fav of vett_favoriti; track fav)
+{
+  <app-mostra [numeri]="fav"></app-mostra>
+}
